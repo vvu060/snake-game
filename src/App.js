@@ -180,7 +180,14 @@ function App() {
     <div className='bg-purple-800 h-screen w-screen flex flex-col text-white gap-5'>
       <Header />
       <div className='flex items-start justify-around mt-28'>
-        <GameBoard renderGameBoard={renderGameBoard} />
+        <GameBoard
+          renderGameBoard={renderGameBoard}
+          isGameOver={gameOver}
+          score={score}
+          setGameSpeed={setGameSpeed}
+          hasGameStarted={gameStarted}
+          gameSpeed={gameSpeed}
+        />
       </div>
     </div>
   );
