@@ -100,6 +100,30 @@ function App() {
   };
 
   // function to update direction of snake
+  const updateDirection = (e) => {
+    let code = e.code;
+
+    switch (code) {
+      case 'ArrowUp':
+        if (direction !== 'DOWN') setDirection('UP');
+        break;
+
+      case 'ArrowDown':
+        if (direction !== 'UP') setDirection('DOWN');
+        break;
+
+      case 'ArrowLeft':
+        if (direction !== 'RIGHT') setDirection('LEFT');
+        break;
+
+      case 'ArrowRight':
+        if (direction !== 'LEFT') setDirection('RIGHT');
+        break;
+
+      default:
+        break;
+    }
+  };
 
   // function to start game
 
