@@ -18,7 +18,6 @@ Welcome to Snake Game, a classic snake game with a twist! This project is built 
 - [Customization](#customization)
 - [Optimizations](#optimizations)
 - [Contributing](#contributing)
-- [License](#license)
 
 ## Features
 
@@ -74,7 +73,6 @@ To run the Snake Game locally on your machine, follow these steps:
 
 5. Open your web browser and navigate to http://localhost:3000 to play the game.
 
-```
 ## Usage
 
 - **Authentication**: Register or log in using Clerk to start playing.
@@ -118,8 +116,3 @@ Contributions are welcome! If you'd like to contribute to this project, please f
 3. Make your changes and commit them with descriptive messages.
 4. Push your changes to your forked repository.
 5. Create a pull request to the original repository.
-
-## License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
-```
