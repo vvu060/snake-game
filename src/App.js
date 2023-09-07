@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import GameBoard from './components/gameBoard/GameBoard';
 
 function App() {
   const gridSize = 20;
@@ -17,7 +18,11 @@ function App() {
   const [gameStarted, setGameStarted] = useState(false);
   const [gameOver, setGameOver] = useState(false);
 
-  return <div className=''>Snake game</div>;
+  return (
+    <div className='bg-purple-800 h-screen w-screen flex flex-col text-white gap-5'>
+      <GameBoard />
+    </div>
+  );
 }
 
 export default App;
