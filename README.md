@@ -29,7 +29,7 @@ Welcome to Snake Game, a classic snake game with a twist! This project uses Reac
 
 ## Demo
 
-For a live demo of the Snake Game, visit [Demo Link](#) (Replace with your demo link when available).
+For a live demo of the Snake Game, visit [Demo Link](#https://snake-game-ruddy-rho.vercel.app/).
 
 ## Technologies
 
@@ -51,7 +51,7 @@ To run the Snake Game locally on your machine, follow these steps:
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/yourusername/snake-game.git
+   git clone https://github.com/vvu060/snake-game.git
    ```
 
 2. Change into the project directory:
