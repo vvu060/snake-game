@@ -27,6 +27,11 @@ function App() {
     setGameStarted(true);
   }, [initSnakePosition, gameOver]);
 
+  const gameOverFn = () => {
+    setGameOver(true);
+    setGameStarted(false);
+  };
+
   // function to render game board
   const renderGameBoard = () => {
     let cellArr = [];
@@ -73,6 +78,25 @@ function App() {
 
   // function to render snake and update snake position
   const updateGame = useCallback(() => {
+    if (
+      snake[0].x < 0 ||
+      snake[0].x > 20 ||
+      snake[0].y < 0 ||
+      snake[0].y > 20
+    ) {
+      gameOverFn();
+      return;
+    }
+
+    let bitItself = snake
+      .slice(1)
+      .some((ele) => ele.x === snake[0].x && ele.y === snake[0].y);
+
+    if (bitItself) {
+      gameOverFn();
+      return;
+    }
+
     let newSnake = [...snake];
     startGame();
 
