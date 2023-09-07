@@ -129,11 +129,12 @@ function App() {
 
   useEffect(() => {
     let interval;
-
-    interval = setInterval(updateGame, gameSpeed);
+    if (gameStarted) {
+      interval = setInterval(updateGame, gameSpeed);
+    }
 
     return () => clearInterval(interval);
-  }, []);
+  }, [gameSpeed, gameStarted, updateGame]);
 
   useEffect(() => {
     document.addEventListener('keydown', updateDirection);
