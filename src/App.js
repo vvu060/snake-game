@@ -16,7 +16,7 @@ function App() {
   const [score, setScore] = useState(0);
   const [food, setFood] = useState({ x: 9, y: 7 });
   const [snake, setSnake] = useState(initSnakePosition);
-  const [direction, setDirection] = useState('RIGHT');
+  const [direction, setDirection] = useState('LEFT');
   const [gameSpeed, setGameSpeed] = useState(250);
   const [gameStarted, setGameStarted] = useState(false);
   const [gameOver, setGameOver] = useState(false);
@@ -187,6 +187,7 @@ function App() {
           setGameSpeed={setGameSpeed}
           hasGameStarted={gameStarted}
           gameSpeed={gameSpeed}
+          startGame={startGame}
         />
       </div>
     </div>
