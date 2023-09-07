@@ -1,6 +1,7 @@
 import { useCallback, useEffect, useMemo, useState } from 'react';
 import GameBoard from './components/gameBoard/GameBoard';
 import Header from './components/header/Header';
+import Scoreboard from './components/scoreboard/Scoreboard';
 
 function App() {
   const gridSize = 20;
@@ -189,6 +190,7 @@ function App() {
           gameSpeed={gameSpeed}
           startGame={startGame}
         />
+        <Scoreboard score={score} isGameOver={gameOver} />
       </div>
     </div>
   );
