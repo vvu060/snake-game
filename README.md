@@ -29,7 +29,7 @@ Welcome to Snake Game, a classic snake game with a twist! This project uses Reac
 
 ## Demo
 
-For a live demo of the Snake Game, visit [Demo Link](#https://snake-game-ruddy-rho.vercel.app/).
+For a live demo of the Snake Game, visit [Demo Link](https://snake-game-ruddy-rho.vercel.app/).
 
 ## Technologies
 
