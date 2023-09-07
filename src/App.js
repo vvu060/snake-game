@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import GameBoard from './components/gameBoard/GameBoard';
 import Header from './components/header/Header';
 
@@ -18,6 +18,14 @@ function App() {
   const [gameSpeed, setGameSpeed] = useState(250);
   const [gameStarted, setGameStarted] = useState(false);
   const [gameOver, setGameOver] = useState(false);
+
+  // function to start game
+  const startGame = useCallback(() => {
+    setGameOver(false);
+    setSnake(initSnakePosition);
+    gameOver && setScore(0);
+    setGameStarted(true);
+  }, [initSnakePosition, gameOver]);
 
   // function to render game board
   const renderGameBoard = () => {
@@ -53,6 +61,7 @@ function App() {
   };
 
   // function to render food
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   const renderFood = () => {
     let randomX = Math.floor(Math.random() * gridSize);
     let randomY = Math.floor(Math.random() * gridSize);
@@ -63,8 +72,9 @@ function App() {
   };
 
   // function to render snake and update snake position
-  const updateGame = () => {
+  const updateGame = useCallback(() => {
     let newSnake = [...snake];
+    startGame();
 
     switch (direction) {
       case 'LEFT':
@@ -97,7 +107,7 @@ function App() {
     }
 
     setSnake(newSnake);
-  };
+  }, [direction, food.x, food.y, renderFood, snake, startGame]);
 
   // function to update direction of snake
   const updateDirection = (e) => {
@@ -124,8 +134,6 @@ function App() {
         break;
     }
   };
-
-  // function to start game
 
   useEffect(() => {
     let interval;
