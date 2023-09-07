@@ -137,6 +137,7 @@ function App() {
   }, [direction, food.x, food.y, renderFood, snake, startGame]);
 
   // function to update direction of snake
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   const updateDirection = (e) => {
     let code = e.code;
 
@@ -175,7 +176,7 @@ function App() {
     document.addEventListener('keydown', updateDirection);
 
     return () => document.removeEventListener('keydown', updateDirection);
-  }, []);
+  }, [updateDirection]);
 
   return (
     <div className='bg-purple-800 h-screen w-screen flex flex-col text-white gap-5'>
