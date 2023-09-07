@@ -1,4 +1,5 @@
 import { SignOutButton, useUser } from '@clerk/clerk-react';
+import Modal from '../modal/Modal';
 
 const Header = () => {
   const { isSignedIn, user } = useUser();
@@ -25,7 +26,7 @@ const Header = () => {
           </div>
         </div>
       ) : (
-        <button>Sign in</button>
+        <Modal />
       )}
     </div>
   );
