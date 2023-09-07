@@ -22,7 +22,9 @@ function App() {
   return (
     <div className='bg-purple-800 h-screen w-screen flex flex-col text-white gap-5'>
       <Header />
-      <GameBoard />
+      <div className='flex items-start justify-around mt-28'>
+        <GameBoard />
+      </div>
     </div>
   );
 }
