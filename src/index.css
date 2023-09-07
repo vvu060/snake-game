@@ -1,3 +1,21 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  .cell {
+    @apply w-[25px] h-[25px];
+  }
+
+  .food {
+    @apply bg-red-500 rounded-full;
+  }
+
+  .snake {
+    @apply bg-green-500 rounded-full;
+  }
+
+  .snake-head {
+    @apply bg-rose-950;
+  }
+}
