@@ -1,6 +1,8 @@
-import React from 'react';
+import { SignOutButton, useUser } from '@clerk/clerk-react';
 
 const Header = () => {
+  const { isSignedIn, user } = useUser();
+
   return (
     <div className='h-16 w-full fixed top-0 bg-purple-950 z-10 flex items-center justify-between px-20'>
       {/* Game Logo */}
