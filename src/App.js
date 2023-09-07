@@ -20,6 +20,37 @@ function App() {
   const [gameOver, setGameOver] = useState(false);
 
   // function to render game board
+  const renderGameBoard = () => {
+    let cellArr = [];
+    for (let row = 0; row < gridSize; row++) {
+      for (let col = 0; col < gridSize; col++) {
+        let className = 'cell';
+
+        let isFood = food.x === row && food.y === col;
+
+        let isSnake = snake.some((ele) => ele.x === row && ele.y === col);
+
+        let isSnakeHead = snake[0].x === row && snake[0].y === col;
+
+        if (isSnake) {
+          className += ' snake';
+        }
+
+        if (isFood) {
+          className += ' food';
+        }
+
+        if (isSnakeHead) {
+          className += ' snake-head';
+        }
+
+        let cell = <div className={className} key={`${row}-${col}`}></div>;
+        cellArr.push(cell);
+      }
+    }
+
+    return cellArr;
+  };
 
   // function to render food
 
