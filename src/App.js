@@ -1,14 +1,16 @@
-import { useCallback, useEffect, useState } from 'react';
+import { useCallback, useEffect, useMemo, useState } from 'react';
 import GameBoard from './components/gameBoard/GameBoard';
 import Header from './components/header/Header';
 
 function App() {
   const gridSize = 20;
 
-  const initSnakePosition = [
-    { x: gridSize / 2, y: gridSize / 2 },
-    { x: gridSize / 2, y: gridSize / 2 + 1 },
-  ];
+  const initSnakePosition = useMemo(() => {
+    return [
+      { x: gridSize / 2, y: gridSize / 2 },
+      { x: gridSize / 2 + 1, y: gridSize / 2 },
+    ];
+  }, [gridSize]);
 
   // define all the states that are needed for the game like score, food, snake, direction, game speed, game started, game over etc
   const [score, setScore] = useState(0);
