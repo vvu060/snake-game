@@ -1,7 +1,11 @@
 import React from 'react';
 
-const GameBoard = () => {
-  return <div>GameBoard</div>;
+const GameBoard = ({ renderGameBoard }) => {
+  return (
+    <div>
+      <div className='board'>{renderGameBoard()}</div>
+    </div>
+  );
 };
 
 export default GameBoard;
