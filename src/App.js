@@ -53,8 +53,51 @@ function App() {
   };
 
   // function to render food
+  const renderFood = () => {
+    let randomX = Math.floor(Math.random() * gridSize);
+    let randomY = Math.floor(Math.random() * gridSize);
+
+    let newFood = { x: randomX, y: randomY };
+
+    setFood(newFood);
+  };
 
   // function to render snake and update snake position
+  const updateGame = () => {
+    let newSnake = [...snake];
+
+    switch (direction) {
+      case 'LEFT':
+        newSnake.unshift({ x: newSnake[0].x, y: newSnake[0].y - 1 });
+        break;
+
+      case 'RIGHT':
+        newSnake.unshift({ x: newSnake[0].x, y: newSnake[0].y + 1 });
+        break;
+
+      case 'UP':
+        newSnake.unshift({ x: newSnake[0].x - 1, y: newSnake[0].y });
+        break;
+
+      case 'DOWN':
+        newSnake.unshift({ x: newSnake[0].x + 1, y: newSnake[0].y });
+        break;
+
+      default:
+        break;
+    }
+
+    let ateFood = newSnake[0].x === food.x && newSnake[0].y === food.y;
+
+    if (ateFood) {
+      setScore((prevScore) => prevScore + 1);
+      renderFood();
+    } else {
+      newSnake.pop();
+    }
+
+    setSnake(newSnake);
+  };
 
   // function to update direction of snake
 
