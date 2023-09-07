@@ -42,21 +42,7 @@ This project is built with the following technologies:
 
 ## Folder Structure
 
-The project follows a structured organization for better code management:
-
-src/
-├── components/
-│ ├── gameBoard/
-│ │ └── GameBoard.js
-│ ├── header/
-│ │ └── Header.js
-│ ├── scoreboard/
-│ │ └── Scoreboard.js
-├── App.js
-├── index.js
-└── ...
-
-You can find specific components and files in their respective folders.
+The project follows a structured organization for better code management.You can find specific components and files in their respective folders.
 
 ## Installation
 
@@ -68,6 +54,27 @@ To run the Snake Game locally on your machine, follow these steps:
    git clone https://github.com/yourusername/snake-game.git
    ```
 
+2. Change into the project directory:
+
+   ```bash
+   cd snake-game
+   ```
+
+3. Install dependencies:
+
+   ```bash
+   npm install
+   ```
+
+4. Start the development server:
+
+   ```bash
+   npm start
+   ```
+
+5. Open your web browser and navigate to http://localhost:3000 to play the game.
+
+```
 ## Usage
 
 - **Authentication**: Register or log in using Clerk to start playing.
@@ -115,3 +122,4 @@ Contributions are welcome! If you'd like to contribute to this project, please f
 ## License
 
 This project is licensed under the MIT License - see the LICENSE file for details.
+```
