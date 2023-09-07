@@ -1,8 +1,8 @@
-# Snake Game
+<img width="1438" alt="Screenshot 2023-09-07 at 6 36 38 PM" src="https://github.com/vvu060/snake-game/assets/68900436/100d0d9a-76d3-4d5e-b7b8-ed3a23e23c3d"># Snake Game
 
-Welcome to Snake Game, a classic snake game with a twist! This project is built using React, Tailwind CSS, Headless UI and Clerk for authentication. It offers various features, including user authentication, a snake game with scoring, a leader board, and the ability to control the game speed.
+Welcome to Snake Game, a classic snake game with a twist! This project uses React, Tailwind CSS, Headless UI, and Clerk for authentication. It offers various features, including user authentication, a snake game with scoring, a leaderboard, and the ability to control the game speed.
 
-![Game Screenshot](screenshot.png)
+![Game Screenshot](![Uploading Screenshot 2023-09-07 at 6.36.38 PM.png…])
 
 ## Table of Contents
 
