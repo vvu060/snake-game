@@ -3,16 +3,23 @@
 @tailwind utilities;
 
 @layer components {
+  /* grid template was not working for 20 cols & rows, therefore using mix of tailwind & vanilla css for board styles  */
+  .board {
+    @apply grid w-max gap-[1px] bg-purple-400 rounded-2xl;
+    grid-template-columns: repeat(20, 25px);
+    grid-template-rows: repeat(20, 25px);
+  }
+
   .cell {
     @apply w-[25px] h-[25px];
   }
 
   .food {
-    @apply bg-red-500 rounded-full;
+    @apply bg-emerald-200 rounded-full;
   }
 
   .snake {
-    @apply bg-green-500 rounded-full;
+    @apply bg-green-600 rounded-full;
   }
 
   .snake-head {
