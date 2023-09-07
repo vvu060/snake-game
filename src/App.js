@@ -19,6 +19,16 @@ function App() {
   const [gameStarted, setGameStarted] = useState(false);
   const [gameOver, setGameOver] = useState(false);
 
+  // function to render game board
+
+  // function to render food
+
+  // function to render snake and update snake position
+
+  // function to update direction of snake
+
+  // function to start game
+
   return (
     <div className='bg-purple-800 h-screen w-screen flex flex-col text-white gap-5'>
       <Header />
