@@ -37,7 +37,8 @@ This project is built with the following technologies:
 
 - [React](https://reactjs.org/): JavaScript library for building user interfaces.
 - [Tailwind CSS](https://tailwindcss.com/): A utility-first CSS framework.
-- [Clerk](https://clerk.dev/): User authentication as a service.
+- [Clerk](https://clerk.com/): User authentication as a service.
+- [Headless UI](https://headlessui.com/): Completely unstyled, fully accessible UI components, designed to integrate beautifully with Tailwind CSS.
 
 ## Folder Structure
 
